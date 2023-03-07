@@ -1,0 +1,46 @@
+:root{
+  --linearColorTheme: radial-gradient(#f1f2f1, #c6c7c6);
+  --fontColor: #000000;
+}
+
+h3{
+  display: flex;
+}
+h1, h2{
+  font-family: 'Montserrat', sans-serif;
+}
+p, article{
+  font-family: 'DM Sans', sans-serif;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+li, span{
+  font-family: 'Poppins', sans-serif;
+}
+.font-dm-sans{
+  font-family: 'DM Sans', sans-serif;
+}
+
+.font-montserrar{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.font-poppins{
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  margin: 0;
+  background-color: #f1f2f1;
+  background: var(--linearColorTheme);
+  /* background: radial-gradient(#2a4347, #132e3b); */
+  color: var(--fontColor);
+}
+ul{
+  list-style-type: none;
+  margin: 0;
+}
+li{
+  margin-left: 0;
+}
