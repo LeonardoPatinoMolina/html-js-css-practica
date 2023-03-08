@@ -1,0 +1,193 @@
+:root{
+  --linearColorTheme: radial-gradient(#f1f2f1, #d3d3d3);
+  --fontColor: #000000;
+  --font2Color: #575757;
+  --font3Color: #d4f4d5;
+  --footerColor: #727d8b;
+  --backGmodal: #ffffff;
+  --backGCard: #ffffff;
+}
+body{
+  margin: 0;
+  background-color: #f1f2f1;
+  background: var(--linearColorTheme);
+  color: var(--fontColor);
+}
+p{
+  color: var(--font2Color);
+}
+article{
+  color: var(--font2Color);
+  background-color: var(--backGCard);
+}
+.fontC1{
+  color: var(--fontColor);
+}
+.fontC2{
+  color: var(--font2Color);
+}
+.fontC3{
+  color: var(--font3Color);
+}
+/*header-----------------------------------*/
+.header__nav{
+  box-shadow: 0 0 12px 2px #0004;
+  background-color: var(--backGmodal);
+}
+
+.header__nav__list{
+  height: 100%;
+}
+.header__nav__list__item{
+  height: 100%;
+  transition: .3s;
+  padding: .4rem;
+  border-radius: .5rem;
+}
+.header__title{
+  text-decoration: underline;
+}
+.header__nav__list__item:hover{
+  transform: scale(1.1);
+}
+.header__nav__list__item__logo{
+  fill: var(--fontColor);
+}
+/*header modal acerca de------------------------*/
+.acerca_de__modal_card p{
+  width: max(200px, 40vw);
+  text-align: center;
+}
+.acerca_de__modal_card{
+  position: relative;
+  background-color: var(--backGmodal);
+  box-shadow: 0 0 12px 4px #0008;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.modal_acerca_de__span{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+/*main----------------------------------------*/
+.main__title:hover{
+  background: linear-gradient(90deg, transparent , #0006,transparent);
+}
+.main__title{
+  cursor: pointer;
+  user-select: none;
+  background: linear-gradient(90deg, transparent , #0002,transparent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  height: 3rem;
+
+}
+.subtitle{
+  background: linear-gradient(90deg, transparent , #0002,transparent);
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--fontColor);
+
+}
+.main__list__item-1::before,
+.main__list__item-2::before,
+.main__list__item-3::before
+{
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 50%;
+  filter: blur(20px);
+}
+.main__list__item-1::before{
+  box-shadow: inset 0 0 100px #e34f2670;
+}
+.main__list__item-2::before{
+  box-shadow: inset 0 0 100px #0c73b870;
+}
+.main__list__item-3::before{
+  box-shadow: inset 0 0 100px #f7df1e70;
+}
+.main__list__item__logo{
+  width: 95px;
+  height: 95px;
+}
+/*second nav-----------------------------------------*/
+.second__nav_wrapper, .acerca_de__modal_wrapper{
+  background: #0003;
+  backdrop-filter: blur(10px);
+  z-index: 99;
+}
+.second_nav__list{
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  background-color: var(--backGmodal);
+  box-shadow: 0 0 12px 4px #0008;
+  transition: .3s;
+  transform-origin: top;
+}
+.second_nav__list__item{
+  transition: .2s;
+}
+.second_nav__list__item:hover{
+  text-decoration: underline;
+  text-shadow: 0 0 20px var(--font2Color);
+
+}
+.cl{
+  background-color: #0002;
+  border-radius: 50%;
+  padding: .4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*section--------------------------------------------*/
+.section__article{
+  box-shadow: 0 0 14px 2px #0003;
+}
+.section__article__img_wrapper{
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 1rem;
+}
+.section__article__img:hover{
+  transform: scale(1.2);
+  filter: sepia(10%) blur(2px);
+}
+.section__article__img{
+  background-position: center;
+  transition: .3s;
+  cursor: pointer;
+  object-fit: cover;
+  width: 100%;  
+  height: 100%;
+}
+/*footer -------------------------------------------------*/
+.footer{
+  background-color: var(--footerColor);
+  color: var(--font3Color);
+}
+
+/*others------------------------------------------------------*/
+#labtop-svg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* scale: 60%; */
+  z-index: -3;
+  opacity: .1;
+}

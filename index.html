@@ -10,214 +10,273 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Montserrat:wght@800&family=Poppins:wght@600&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono&display=swap"
+      rel="stylesheet"
+    />
     <title>SPA Demo</title>
-    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="src/css/main.css" />
   </head>
   <body>
+    <img src="./src/assets/labtop.svg" alt="laptop" id="labtop-svg" />
     <header class="header">
+      <h2 class="header__title">Ejercicio</h2>
       <nav class="header__nav">
         <ul class="header__nav__list">
-          <li class="header__nav__list__item">Home</li>
-          <li class="header__nav__list__item">Acerca de</li>
-          <li 
-          id="btn_theme"
-          data-theme="light"
-          class="header__nav__list__item">
-            Tema
+          <li
+            class="header__nav__list__item"
+            data-modal="modal_acerca_de"
+            id="modal_acerca_de_on"
+          >
+            <span class="nav_tag">Sobre mi</span>
+            <span
+              class="material-symbols-rounded header__nav__list__item__logo"
+            >
+              account_circle
+            </span>
+          </li>
+          <li id="btn_theme" data-theme="light" class="header__nav__list__item">
+            <span class="nav_tag">Cambiar Tema</span>
             <!-- logo dark   -->
-            <svg
-              class="header__nav__list__item__logo none-display"
-              height="30"
-              width="30"
-              viewBox="0 0 100 100"
+            <span
+              id="theme__logo_dark"
+              class="material-symbols-rounded header__nav__list__item__logo"
             >
-              <defs>
-                <mask id="mask">
-                  <circle cx="50" cy="50" r="40" fill="white" />
-                  <circle cx="30" cy="50" r="40" fill="black" />
-                </mask>
-              </defs>
-              <circle cx="50" cy="50" r="40" fill="white" mask="url(#mask)" />
-            </svg>
+              dark_mode
+            </span>
             <!-- logo ligth   -->
-            <svg
-              class="header__nav__list__item__logo"
-              height="30"
-              width="30"
-              viewBox="0 0 100 100"
+            <span
+              id="theme__logo_light"
+              class="none-display material-symbols-rounded header__nav__list__item__logo"
             >
-              <circle cx="50" cy="50" r="30" fill="white" />
-              <line
-                x1="50"
-                y1="10"
-                x2="50"
-                y2="0"
-                stroke="white"
-                stroke-width="5"
-              />
-              <line
-                x1="50"
-                y1="90"
-                x2="50"
-                y2="100"
-                stroke="white"
-                stroke-width="5"
-              />
-              <line
-                x1="10"
-                y1="50"
-                x2="0"
-                y2="50"
-                stroke="white"
-                stroke-width="5"
-              />
-              <line
-                x1="90"
-                y1="50"
-                x2="100"
-                y2="50"
-                stroke="white"
-                stroke-width="5"
-              />
-              <line
-                x1="15"
-                y1="15"
-                x2="5"
-                y2="5"
-                stroke="white"
-                stroke-width="5"
-              />
-              <line
-                x1="85"
-                y1="85"
-                x2="95"
-                y2="95"
-                stroke="white"
-                stroke-width="5"
-              />
-              <line
-                x1="15"
-                y1="85"
-                x2="5"
-                y2="95"
-                stroke="white"
-                stroke-width="5"
-              />
-              <line
-                x1="85"
-                y1="15"
-                x2="95"
-                y2="5"
-                stroke="white"
-                stroke-width="5"
-              />
-            </svg>
+              light_mode
+            </span>
           </li>
         </ul>
       </nav>
     </header>
+    <div id="modal_acerca_de" class="acerca_de__modal_wrapper hidden">
+      <div class="acerca_de__modal_card">
+        <h3>Sobre mi</h3>
+        <span
+          class="modal_acerca_de__span material-symbols-rounded"
+          data-modal="modal_acerca_de"
+          id="modal_acerca_de_off"
+        >
+          close
+        </span>
+        <img
+          src="https://avatarairlines.com/wp-content/uploads/2020/05/Male-placeholder.jpeg"
+          alt="avatar img"
+          width="200px"
+          height="200px"
+        />
+        <p class="fontC1">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          Maxime eligendi eaque harum.
+        </p>
+      </div>
+    </div>
     <main class="main">
-      <h1 class="main__title">Ejercicio</h1>
+      <h1
+        id="modal_main_on"
+        data-modal="modal_main"
+        class="main__title"
+      >
+        El trayecto
+        <span class="material-symbols-rounded"> expand_more </span>
+      </h1>
       <p class="main__paragraph">
-        La presente demo es un ejercicio en el que solo se utilizó:
+        La presente demo es un pequeño ejercicio en el que solo se utilizó:
       </p>
       <ul class="main__list">
         <li class="main__list__item-1">
           <h3>Html</h3>
-          <svg
+          <img
+            id="html_logo"
             class="main__list__item__logo"
-            width="90"
-            height="90"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 452 520"
-          >
-            <path fill="#e34f26" d="M41 460L0 0h451l-41 460-185 52" />
-            <path fill="#ef652a" d="M226 472l149-41 35-394H226" />
-            <path
-              fill="#ecedee"
-              d="M226 208h-75l-5-58h80V94H84l15 171h127zm0 147l-64-17-4-45h-56l7 89 117 32z"
+            src="./src/assets/html.svg"
+            alt="html logo"
             />
-            <path
-              fill="#fff"
-              d="M226 265h69l-7 73-62 17v59l115-32 16-174H226zm0-171v56h136l5-56z"
-            />
-          </svg>
-        </li>
-        <li class="main__list__item-2">
-          <h3>Css</h3>
-          <svg
+          </li>
+          <li class="main__list__item-2">
+            <h3>Css</h3>
+            <img
+            id="css_logo"
             class="main__list__item__logo"
-            width="95"
-            height="95"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 452 520"
-          >
-            <path fill="#0c73b8" d="M41 460L0 0h451l-41 460-185 52" />
-            <path fill="#30a9dc" d="M226 472l149-41 35-394H226" />
-            <path
-              fill="#ecedee"
-              d="M226 208H94l5 57h127zm0-114H84l5 56h137zm0 261l-124-33 7 60 117 32z"
-            />
-            <path
-              fill="#fff"
-              d="M226 265h69l-7 73-62 17v59l115-32 26-288H226v56h80l-6 58h-74z"
-            />
-          </svg>
+            src="./src/assets/css.svg"
+            alt="css logo"
+          />
         </li>
         <li class="main__list__item-3">
           <h3>Javascript</h3>
-          <svg
+          <img
+            id="js_logo"
             class="main__list__item__logo"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 630 630"
-          >
-            <rect width="630" height="630" fill="#f7df1e" />
-            <path
-              d="m423.2 492.19c12.69 20.72 29.2 35.95 58.4 35.95 24.53 0 40.2-12.26 40.2-29.2 0-20.3-16.1-27.49-43.1-39.3l-14.8-6.35c-42.72-18.2-71.1-41-71.1-89.2 0-44.4 33.83-78.2 86.7-78.2 37.64 0 64.7 13.1 84.2 47.4l-46.1 29.6c-10.15-18.2-21.1-25.37-38.1-25.37-17.34 0-28.33 11-28.33 25.37 0 17.76 11 24.95 36.4 35.95l14.8 6.34c50.3 21.57 78.7 43.56 78.7 93 0 53.3-41.87 82.5-98.1 82.5-54.98 0-90.5-26.2-107.88-60.54zm-209.13 5.13c9.3 16.5 17.76 30.45 38.1 30.45 19.45 0 31.72-7.61 31.72-37.2v-201.3h59.2v202.1c0 61.3-35.94 89.2-88.4 89.2-47.4 0-74.85-24.53-88.81-54.075z"
-            />
-          </svg>
+            src="./src/assets/js.svg"
+            alt="javascript logo"
+          />
         </li>
       </ul>
       <p class="main__paragraph">
         Esto con la finalidad de poner en práctica todo lo aprendido a lo largo
         de mi tayectoria como aprendiz en el desarrollo web
       </p>
-      <nav class="second_nav">
-        <h2 class="main__subtitle">Aprendido</h2>
-        <ul class="second_nav__list">
-          <li class="second_nav__list__item">Javascript</li>
-          <li class="second_nav__list__item">Typescript</li>
-          <li class="second_nav__list__item">React.js</li>
-          <li class="second_nav__list__item">Next.js</li>
-          <li class="second_nav__list__item">Node.js</li>
-          <li class="second_nav__list__item">Espress</li>
-        </ul>
+      <nav id="modal_main" class="second_nav hidden">
+        <div class="second__nav_wrapper">
+          <ul id="modal_main_card" class="second_nav__list">
+            <li class="second_nav__list__item js">Javascript</li>
+            <li class="second_nav__list__item ts">Typescript</li>
+            <li class="second_nav__list__item rc">React.js</li>
+            <li class="second_nav__list__item nx">Next.js</li>
+            <li class="second_nav__list__item nd">Node.js</li>
+            <li class="second_nav__list__item ss">Sass</li>
+            <li class="second_nav__list__item"></li>
+            <li
+              id="modal_main_off"
+              data-modal="modal_main"
+              class="second_nav__list__item cl"
+            >
+              <span
+                class="material-symbols-rounded"
+                data-trigger-type="off"
+                data-modal="modal_main"
+              >
+                close
+              </span>
+            </li>
+          </ul>
+        </div>
       </nav>
     </main>
+    <h2 class="subtitle">mis intereces</h2>
     <section class="section">
       <article class="section__article">
+        <a
+          target="_blank"
+          href="https://angular.io/"
+          class="section__article__img_wrapper"
+        >
+          <img
+            class="section__article__img"
+            src="https://i0.wp.com/www.comsoft-mexico.com/wp-content/uploads/2020/03/AngularLogo.jpg?resize=1200%2C500&ssl=1"
+            alt="article img"
+          />
+        </a>
+        <h3>Angular</h3>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit,
         consequuntur!
       </article>
       <article class="section__article">
+        <a
+          target="_blank"
+          href="https://flutter.dev/"
+          class="section__article__img_wrapper"
+        >
+          <img
+            class="section__article__img"
+            src="https://cdn.dribbble.com/users/1622791/screenshots/11174104/media/10f980d41342cfb900a4b8e6d025bb79.png"
+            alt="article img"
+          />
+        </a>
+        <h3>Flutter</h3>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit,
         consequuntur!
       </article>
       <article class="section__article">
+        <a
+          target="_blank"
+          href="https://reactnative.dev/"
+          class="section__article__img_wrapper"
+        >
+          <img
+            class="section__article__img"
+            src="https://estudioalfa.com/wp-content/uploads/2019/07/usar-react-native-crear-app.png.pagespeed.ce.KO0HOvtZ-R.png"
+            alt="article img"
+          />
+        </a>
+        <h3>React Native</h3>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit,
         consequuntur!
       </article>
       <article class="section__article">
+        <a
+          target="_blank"
+          href="https://www.docker.com/"
+          class="section__article__img_wrapper"
+        >
+          <img
+            class="section__article__img"
+            src="https://www.sdos.es/sites/default/files/Blog/Header_image/docker.png"
+            alt="article img"
+          />
+        </a>
+        <h3>Docker</h3>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit,
+        consequuntur!
+      </article>
+    </section>
+    <h2 class="subtitle">Otras inventivas</h2>
+    <section class="section">
+      <article class="section__article">
+        <a
+          target="_blank"
+          href="https://github.com/LeoCHAD/modal_exercise"
+          class="section__article__img_wrapper"
+        >
+          <img
+            class="section__article__img"
+            src="https://i.postimg.cc/NFspRHm0/modale.png"
+            alt="inventiva img"
+          />
+        </a>
+        <!-- https://postimg.cc/delete/tKT2k5Qt/1bd7927e para eliminar la imagen -->
+        <h3>Modal execice</h3>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit,
+        consequuntur!
+      </article>
+      <article class="section__article">
+        <a
+          target="_blank"
+          href="https://github.com/LeoCHAD/first-project-next"
+          class="section__article__img_wrapper"
+        >
+          <img
+            class="section__article__img"
+            src="https://i.postimg.cc/9FNqB7Zn/Sin-t-tulo.png"
+            alt="article img"
+          />
+        </a>
+        <!-- https://postimg.cc/delete/ZgXysczY/5aea8e05 para eliminar la imagen -->
+        <h3>My First-next-project</h3>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit,
+        consequuntur!
+      </article>
+      <article class="section__article">
+        <a href="#" class="section__article__img_wrapper">
+          <img
+            class="section__article__img"
+            src="https://www.schmolke-carbon.com/wp-content/uploads/2017/05/Coming-Soon-PNG.png"
+            alt="article img"
+          />
+        </a>
+        <h3>Trabajando en más cositas :)</h3>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit,
         consequuntur!
       </article>
     </section>
     <footer class="footer">
       <ul class="footer__list">
-        <li class="footer__list">LeonardoPatino99@gmail.com</li>
-        <li class="footer__list"><a href="#">LeoChad</a></li>
+        <li class="footer__list__item">LeonardoPatino99@gmail.com</li>
+        <li class="footer__list__item">
+          <a href="https://github.com/LeoCHAD" target="_blank">LeoChad</a>
+        </li>
       </ul>
     </footer>
-    <script src="./js/main.js" type="module"></script>
+    <script src="./src/js/main.js" type="module"></script>
   </body>
 </html>
