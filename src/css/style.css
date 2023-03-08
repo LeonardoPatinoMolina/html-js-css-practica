@@ -156,7 +156,6 @@ article{
   box-shadow: 0 0 14px 2px #0003;
 }
 .section__article__img_wrapper{
-  height: 200px;
   overflow: hidden;
   position: relative;
   border-radius: 1rem;
