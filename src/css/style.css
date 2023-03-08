@@ -123,6 +123,7 @@ article{
 .main__list__item__logo{
   width: 95px;
   height: 95px;
+  cursor: pointer;
 }
 /*second nav-----------------------------------------*/
 .second__nav_wrapper, .acerca_de__modal_wrapper{
