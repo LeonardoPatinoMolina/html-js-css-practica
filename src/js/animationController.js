@@ -58,9 +58,7 @@ htmlL.addEventListener('click',()=>{
 const footer = $('.footer');
 const itemsFooter = $$('.footer__list__item')
 
-// Crear una instancia del Intersection Observer
 const observer = new IntersectionObserver(entries => {
-  // Por cada entrada en el viewport, verifica si el elemento esta visible y agrega la clase "visible"
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       itemsFooter.forEach(item=>{

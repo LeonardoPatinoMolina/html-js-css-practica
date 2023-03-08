@@ -1,6 +1,6 @@
 @media screen and (max-width: 780px) {
   /*typography------------------------*/
-  h2{
+  h2,  .second_nav__list__item{
     font-size: 1.2rem;
   }
   h1{
@@ -10,9 +10,6 @@
     font-size: 1rem;
   }
   /*list items------------------------*/
-  .second_nav__list__item{
-    font-size: 1.2rem;
-  }
   .main__list__item__logo{
       transform: scale(.8);
   }
@@ -24,12 +21,14 @@
   .header__nav{
     width: max(80px, 50%);
     height: max(60px, 10vh);
-    align-items: center;
     display: flex;
     border-radius: 1rem 0 0 1rem;
     position: absolute;
     top: 10px;
     right: 0;
+  }
+  .header__nav, .second_nav__list{
+    align-items: center;
   }
   /*modal main-------------------*/
   .second_nav__list{
@@ -43,7 +42,6 @@
       "cl cl"
     ;
     justify-items: center;
-    align-items: center;
   }
   .cl{
     grid-row: 4/5;

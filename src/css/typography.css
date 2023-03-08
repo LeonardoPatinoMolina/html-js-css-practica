@@ -6,27 +6,21 @@ h1, h2, h3{
   font-weight: 800;
   text-align: center;
 }
-p, article{
+.font-sono{
+  font-family: 'Sono', sans-serif
+}
+p, article, .font-dm-sans{
   font-family: 'DM Sans', sans-serif;
 }
 a{
   text-decoration: none;
   color: inherit;
 }
-li, span{
+li, span, .font-poppins{
   font-family: 'Poppins', sans-serif;
-
 }
-.font-dm-sans{
-  font-family: 'DM Sans', sans-serif;
-}
-
 .font-montserrar{
   font-family: 'Montserrat', sans-serif;
-}
-
-.font-poppins{
-  font-family: 'Poppins', sans-serif;
 }
 ul{
   list-style-type: none;
